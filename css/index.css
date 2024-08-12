@@ -1,0 +1,141 @@
+/* Include custom font for h1 */
+@font-face {
+    font-family: 'Bold';
+    src: url('../fonts/SamsungSharpSans-Bold.ttf') format('truetype');
+}
+
+/* Include custom font for the rest of the text */
+@font-face {
+    font-family: 'Regular';
+    src: url('../fonts/OneUI6DefaultFont_SEC-VF.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Light';
+    src: url('../fonts/SamsungSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Medium';
+    src: url('../fonts/SamsungSans-Medium.ttf') format('truetype');
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Regular',  sans-serif; /* Use Regular for the rest of the text */
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Apply custom font to h1 */
+h1 {
+    font-family: 'Bold', sans-serif;
+    font-size: 32px; /* Adjust the font size as needed */
+    text-align: center; 
+}
+
+.input-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+.floating-input {
+    background-color: transparent;
+    border: 1px solid #636363;
+    padding: 15px 10px 10px 10px;
+    width: calc(100% - 22px);
+    margin: 0 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.input-submit {
+    text-align: center;
+    display: flex;
+    gap: 9px;
+}
+
+.input-submit button {
+    font-family: 'Medium', sans-serif;
+    font-size: 15px;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.input-submit .back{
+    background-color: rgb(231, 231, 231);
+}
+
+.input-submit .back:hover{
+    background-color: #b9b9b9;
+}
+
+.input-submit .signup{
+    background-color: rgb(178, 219, 255);
+    color: white;
+}
+
+.input-submit .signup:hover{
+    background-color: #3083ff;
+}
+
+.floating-label {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #636363;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.floating-input:focus + .floating-label,
+.floating-input:not(:placeholder-shown) + .floating-label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #636363;
+    background: #f9f9f9;
+    padding: 0 5px;
+}
+
+.floating-input:focus {
+    outline: none;
+}
+
+.filled .floating-label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #636363;
+    background: #f9f9f9;
+    padding: 0 5px;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 20px;
+    color: #636363;
+}
