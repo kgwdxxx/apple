@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create your account</h1>
+        <br>
+        <br>
+        <form id="signupForm" action="./php/signup.php" method="post">
+            <div class="input-container">
+                <label for="username" class="floating-label">Username</label>
+                <input type="text" id="username" class="floating-input" name="username" required>
+            </div>
+            <div class="input-container">
+                <label for="email" class="floating-label">Email</label>
+                <input type="email" id="email" class="floating-input" name="email" required>
+            </div>
+            <div class="input-container">
+                <label for="password" class="floating-label">Password</label>
+                <input type="password" id="password" class="floating-input" name="password" required>
+                <i class="fas fa-eye toggle-password" id="togglePassword" onclick="togglePassword('password', this)"></i>
+            </div>
+            <div class="input-container">
+                <label for="confirmPassword" class="floating-label">Confirm Password</label>
+                <input type="password" id="confirmPassword" class="floating-input" name="confirmPassword" required>
+                <i class="fas fa-eye toggle-password" id="toggleConfirmPassword" onclick="togglePassword('confirmPassword', this)"></i>
+            </div>
+            <div class="input-submit">
+                <button class="back" type="button">Back</button>
+                <button class="signup" type="submit">Sign Up</button>
+            </div>
+        </form>
+        <p id="errorMessages"></p>
+    </div>
+    <script src="./js/signup.js"></script>
+</body>
+</html>
